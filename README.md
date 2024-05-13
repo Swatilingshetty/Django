@@ -38,3 +38,11 @@ pip 23.2.1 from C:\Django24\01_projectstructure\swati\Lib\site-packages\pip (pyt
 * > dir
 * '''python manage.py runserver''' 
   
+## explain django project structure
+'''
+__init __.py: this is for python it can treated as package
+asgl.py: ASGI stands aschronous server gateway interface
+         it ends the capabilities of WSGI (web server gateway interface) which is standard way communication b/w web server and web application.
+settings.py: this file contain project settings to modify function.
+
+'''
