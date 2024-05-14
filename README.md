@@ -7,7 +7,8 @@ Django24
 
 # How to craete virtual env in windows
 * note: '''pip --version'''
-  '''
+  '''.
+  
 (swati) C:\Django24\01_projectstructure\swati\Scripts\project_test>pip --version
 pip 23.2.1 from C:\Django24\01_projectstructure\swati\Lib\site-packages\pip (python 3.12)
 
