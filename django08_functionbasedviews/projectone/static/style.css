@@ -1,0 +1,23 @@
+table,th,td{
+    border:2px solid blue;
+    padding:4px;
+    font-family: monospace;
+}
+
+tr:hover{
+    background-color: rgb(32, 159,201 );
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+thead{
+    background-color: lightgreen;
+    color: black;
+}
+a{
+    text-decoration: none;
+}

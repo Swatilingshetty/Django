@@ -1,0 +1,45 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="{% static  "style.css"%}">
+        <title>document </title>
+
+    </head>
+    <body>
+        <h1>data</h1>
+           <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Brands</th>
+                        <th>model</th>
+                        <th>cost</th>
+                    </tr>
+
+                </thead>
+           
+           <tbody>
+            {% for p in products%}
+            <tr>
+                <td>{{p.id}}</td>
+                <td>{{p.Productbrandname}}</td>
+                <td>{{p.Productbrandmodel}}</td>
+                <td>{{p.Productbrandcost}}</td>
+                <td><button type="button"><a href="product/create/{{p.id}}">update record</a></button></td>
+                <td><button type="button"><a href="">delete record</a></button></td>
+            </tr>
+              {% endfor %}
+           </tbody>
+        </table>
+
+        <!-- logic -->
+
+         <br>
+         <button type="button">
+            <a href="/product/create">ADD product</a>
+         </button>
+    </body>
+</html>
