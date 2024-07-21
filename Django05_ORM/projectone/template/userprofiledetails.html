@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport"  ,content="width=device-width", initial="scale=1.0">
+        <title>All records</title>
+        <style>
+            table,th,td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>user profile</h3>
+        {% if details %}
+        <table style="width: 100;">
+            <thead>
+                <th>id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>salary</th>
+            </thead>
+            {% for p in details %}
+            <tr>
+                <td>{{p.id}}</td>
+                <td>{{p.Username}}</td>
+                <td>{{p.Email}}</td>
+                <td>{{p.Contact}}</td>
+                <td>{{p.salary}}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <p>no records found in database</p>
+            {% endif %}
+        </table>
+    
+    </body>
+</html>
+
+
