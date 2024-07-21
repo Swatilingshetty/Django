@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+{% load static%}
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet"  href="{% static "style.css"%}">
+        <title>document </title>
+
+    </head>
+    <body>
+        <h1>data</h1>
+           <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Brands</th>
+                        <th>model</th>
+                        <th>cost</th>
+                    </tr>
+
+                </thead>
+           
+           <tbody>
+              
+            <tr>
+               <td>{{product.id}}</td>
+                <td>{{product.productbrandname}}</td>
+                <td>{{product.productbrandmodel}}</td>
+                <td>{{product.productbrandcost}}</td>
+                <td><button type="button"><a href="/product/update/{{product.id}}">Update product</a></button></td>
+                <td><button type="button"><a href="/product/delate/{{product.id}}">Delete product</a></button></td>
+            </tr>
+           </tbody>
+        </table>
+
+        <!-- logic -->
+
+         <br>
+         <button type="button">
+            <a href="http://127.0.0.1:8000/products/">Back</a>
+         </button>
+    </body>
+</html>

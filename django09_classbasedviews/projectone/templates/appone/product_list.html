@@ -1,0 +1,45 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet"  href="{% static "style.css"%}">
+        <title>document </title>
+
+    </head>
+    <body>
+        <h1>data</h1>
+           <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Brands</th>
+                        <th>model</th>
+                        <th>cost</th>
+                    </tr>
+
+                </thead>
+           
+           <tbody>
+            {% for p in product_list %}
+            <tr>
+                <!-- <td>{{p.id}}</td> -->
+                 <td><button type="button"><a href="/{{p.id}}">{{p.id}}</a></button></td>
+                <td>{{p.productbrandname}}</td>
+                <td>{{p.productbrandmodel}}</td>
+                <td>{{p.productbrandcost}}</td>
+                <td><button type="button"><a href="/product/update/{{p.id}}">Update product</a></button></td>
+                <td><button type="button"><a href="/product/delete/{{p.id}}">Delete product</a></button></td>
+            </tr>
+              {% endfor %}
+           </tbody>
+        </table>
+
+        <!-- logic -->
+
+         <br>
+         <button type="button">
+            <a href="/products/create/">ADD product</a>
+         </button>
+    </body>
+</html>
