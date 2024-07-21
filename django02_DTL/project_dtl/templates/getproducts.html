@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport"  ,content="width=device-width", initial="scale=1.0">
+        <title>document</title>
+
+    </head>
+
+    <body>
+        <ul>
+            {% for i in mobilebrands %}
+                <li>
+                    <h1>{{ i.productbrand }}</h1>
+                    <h1>{{ i.productcost }}</h1>
+                    <h1>{{ i.productmodel }}</h1>
+                </li>
+            {% endfor %}
+        </ul>     
+       
+    </body>
+
+</html>
